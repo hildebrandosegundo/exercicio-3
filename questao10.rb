@@ -29,5 +29,20 @@ class BombaCombustivel
   end
 end
 tipo = ["gasolina", "diesel", "alcool"]
+t = tipo[1]
 valor = 2.50
-bombaCombustivel = BombaCombustivel.new(tipo,valor)
+bombaCombustivel = BombaCombustivel.new(t,valor)
+bombaCombustivel.alterarValor(2.80)
+puts bombaCombustivel.tipoCombustivel
+puts "valor pago por litro: #{bombaCombustivel.abatecerPorlitro(20)}"
+puts bombaCombustivel.qtdCombustivel
+puts "qtd de litros por valor: #{bombaCombustivel.abastecerPorValor(50)}"
+puts bombaCombustivel.qtdCombustivel
+t = tipo[0]
+bombaCombustivel.alterarValor(3.12)
+bombaCombustivel.alterarCombustivel(t)
+puts bombaCombustivel.tipoCombustivel
+puts "valor pago por litro: #{bombaCombustivel.abatecerPorlitro(50)}"
+puts bombaCombustivel.qtdCombustivel
+puts "qtd de litros por valor: #{bombaCombustivel.abastecerPorValor(150)}"
+puts bombaCombustivel.qtdCombustivel
